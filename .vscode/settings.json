@@ -1,0 +1,22 @@
+{
+  "files.associations": {
+    ".eslintrc": "jsonc",
+    ".prettierrc": "jsonc",
+    ".lintstagedrc": "jsonc",
+
+    ".eslintignore": "ignore"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    ".eslintcache": true,
+    "dist/*": true,
+    "yarn.lock": true,
+    ".git": true
+  }
+}
