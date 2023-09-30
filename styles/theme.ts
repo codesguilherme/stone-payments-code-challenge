@@ -34,6 +34,40 @@ const Theme = {
     medium: '16px',
     large: '24px',
     huge: '56px'
+  },
+  fontWeights: {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700
+  },
+  fonts: {
+    Roboto: '"Roboto", sans-serif',
+    CircularStd: '"Circular Std", sans-serif',
+    SharonSans: '"Sharon Sans", sans-serif'
+  },
+  fontSizes: {
+    tiny: {
+      fontSize: '12px',
+      lineHeight: '16px'
+    },
+    small: {
+      fontSize: '14px',
+      lineHeight: '20px'
+    },
+    medium: {
+      fontSize: '16px',
+      lineHeight: '24px'
+    },
+    large: {
+      fontSize: '18px',
+      lineHeight: '28px'
+    },
+    huge: {
+      fontSize: '24px',
+      lineHeight: '32px'
+    }
   }
 };
 
