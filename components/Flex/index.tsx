@@ -1,11 +1,9 @@
 import React from 'react';
-import styled, {
-  CSSProperties,
-  DefaultTheme,
-  ExecutionProps
-} from 'styled-components';
+import { CSSProperties, DefaultTheme, ExecutionProps } from 'styled-components';
 
-export interface StackProps
+import * as S from './styles';
+
+export interface FlexProps
   extends React.HTMLAttributes<HTMLElement>,
     ExecutionProps {
   /**
@@ -30,37 +28,28 @@ export interface StackProps
    * such as 'small', 'medium', etc.
    */
   readonly spacing?: keyof DefaultTheme['spacing'];
+
+  /** Determines the alignment of the component within its container. */
+  readonly alignSelf?: CSSProperties['alignSelf'];
 }
 
-const StackRoot = styled('div').withConfig({
-  shouldForwardProp: (prop) =>
-    !['orientation', 'alignItems', 'spacing', 'justifyContent'].includes(prop)
-})<StackProps>`
-  display: flex;
-  flex-direction: ${(props) =>
-    props.orientation === 'vertical' ? 'column' : 'row'};
-  align-items: ${(props) => props.alignItems};
-  justify-content: ${(props) => props.justifyContent};
-  gap: ${(props) => props.spacing && props.theme.spacing[props.spacing]};
-`;
-
 /**
- * The `Stack` component is a versatile layout container that allows you to
+ * The `Flex` component is a versatile layout container that allows you to
  * create vertical and horizontal stacks of elements with customizable
  * spacing and alignment.
  *
  * Usage example:
  *
  * ```js
- * <Stack orientation="horizontal" alignItems="center" spacing={2}>
+ * <Flex orientation="horizontal" alignItems="center" spacing={2}>
  *   <div>Item 1</div>
  *   <div>Item 2</div>
  *   <div>Item 3</div>
- * </Stack>
+ * </Flex>
  * ```
  */
-const Stack: React.FC<StackProps> = ({ orientation = 'vertical', ...rest }) => {
-  return <StackRoot orientation={orientation} {...rest} />;
+const Flex: React.FC<FlexProps> = ({ orientation = 'vertical', ...rest }) => {
+  return <S.Wrapper orientation={orientation} {...rest} />;
 };
 
-export default Stack;
+export default Flex;
