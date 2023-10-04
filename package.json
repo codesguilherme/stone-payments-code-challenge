@@ -9,10 +9,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --max-warnings=0 --cache --ext .js,.ts,.jsx,.tsx .",
-    "lint:fix": "yarn -s lint --fix",
+    "lint:fix": "eslint --ext .js,.ts,.jsx,.tsx . --fix",
     "postlint:fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.{js,jsx,json,html,css,less,scss,yml}'",
     "test": "jest",
-    "test:watch": "yarn -s test --watch"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "axios": "^1.5.1",
