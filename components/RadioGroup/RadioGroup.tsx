@@ -58,7 +58,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
   const contextValue = useMemo<RadioGroupContextProps>(
     () => ({
       name,
-      value,
+      value: String(value),
       onChange: (e) => {
         if (!isControlled) {
           setValueState(e.target.value);
