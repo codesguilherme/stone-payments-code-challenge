@@ -64,9 +64,17 @@ const Theme = {
       fontSize: '18px',
       lineHeight: '28px'
     },
-    huge: {
+    xLarge: {
+      fontSize: '20px',
+      lineHeight: '28px'
+    },
+    xxLarge: {
       fontSize: '24px',
       lineHeight: '32px'
+    },
+    xxxLarge: {
+      fontSize: '64px',
+      lineHeight: '80px'
     }
   }
 };
