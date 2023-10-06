@@ -33,6 +33,9 @@ export const Input = styled.input`
   outline: none;
   appearance: none;
 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
   &::placeholder {
     color: ${(props) => props.theme.colors.mediumGray2};
   }
