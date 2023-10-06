@@ -12,6 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <title>Stone Code Challenge</title>
       </Head>
       <ThemeProvider theme={Theme}>
         <GlobalStyles />
