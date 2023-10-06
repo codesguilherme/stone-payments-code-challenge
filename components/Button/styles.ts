@@ -35,6 +35,9 @@ export const Wrapper = styled('button').withConfig({
     justify-content: center;
     gap: ${theme.spacing.medium};
 
+    height: 56px;
+    min-width: 64px;
+
     padding-inline: ${theme.spacing.medium};
     padding-block: ${theme.spacing.medium};
     border-radius: ${theme.spacing[2]};
